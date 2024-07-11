@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background:url('/images/hotel-room.jpg');
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  color:black;
+  padding-left: 350px;
+}
+
+form {
+  width: 600px;
+  height: 340px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  border-radius: 8px;
+   color: black;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+ }
+
+.form-group label {
+  margin-bottom: 0;
+}
+
+.form-field {
+  flex: 1;
+  margin-right: 10px;
+  justify-content: space-around;
+}
+
+.form-field:last-child {
+  margin-right: 0;
+}
+#log-user{
+  color: white;
+  font-weight:lighter;
+  font-size: 18px;
+  padding-left: 20%;
+}
+#admin{
+  color: white;
+  font-weight:lighter;
+  font-size: 18px;
+}
+#location{
+  width:97%;
+}
+#checkOut{
+  padding-left: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="email"],
+input[type="tel"] {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+ }
+
+ button {
+  width: 32%;
+  padding: 10px;
+  background-color: #5cb85c;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  }
+
+  .btn{
+    text-align: center;
+  }
+
+button:hover {
+  background-color: #4cae4c;
+}

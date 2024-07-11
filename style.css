@@ -1,0 +1,114 @@
+body {
+    padding: 0;
+    margin: 0;
+     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+}
+
+h1{
+    position: absolute;
+    top: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: honeydew;
+}
+
+.bg-img{
+    background-image: url("./images/login.jpg");
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login{
+    position: relative;
+    margin: 200px auto;
+    padding: 40px 50px;
+    max-width: 300px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+.login input, .btn{
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 14px 12px;
+    font-size: 16px;
+    border-radius: 2px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.login input[type=text],
+.login input[type=password]{
+    border: 1px solid #c0c0c0;
+    transition: .2s;
+}
+
+.login input[type=text]:hover, .login input[type=password]:hover {
+    border-color: #F44336;
+    outline: none;
+    transition: all .2s ease-in-out;
+}
+.btn{
+    border: none;
+    background: #EF5350;
+    color: white;
+    font-weight: bold;
+    transition: 0.2s;
+    margin: 20px 0px;
+    cursor:pointer;
+}
+.btn:hover{
+    background: #F44336;
+    cursor: pointer;
+}
+
+.login h2{
+    margin: 20px 0 0;
+    color:#EF5350;
+    font-size: 28px;
+}
+.login p{
+    margin-bottom: 40px;
+    color: white;
+}
+.links{
+display: table;
+width: 100%;
+box-sizing: border-box;
+border-top: 1px solid #c0c0c0;  
+margin-bottom: 10px; 
+}
+.links a{
+    display: table-cell;
+    padding-top: 10px;
+    
+}
+.links a:first-child{
+    text-align: left;
+}
+.links a:last-child{
+    text-align: right   ;
+}
+
+.login h2,.login a, .login p{
+    text-align: center;
+}
+.login a{
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+}
+.login a:hover{
+    text-decoration: underline;
+}

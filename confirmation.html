@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Confirmation</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: url("/images/Block-Background-Large.jpg");
+      }
+      h1 {
+        text-align: center;
+      }
+      .log-user{
+        font-size: larger;
+        float: right;
+        padding-right: 10px;
+        color: black;
+      }
+      #admin{
+        color: red;
+      }
+      #confirmationDetails {
+        background-color: #b7b597;
+        text-align: center;
+        border: none;
+        width: 500px;
+        height: auto;
+        position: absolute;
+        left: 420px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      hr {
+        height: 10px;
+        border: 0;
+        box-shadow: 0 10px 10px -10px #8c8c8c inset;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="log-user">Login name: <span id="admin"></span></span>
+    
+    <h1>Booking Confirmation</h1>
+    <div id="confirmationDetails"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+        let confirmationDetails = document.getElementById(
+          "confirmationDetails"
+        );
+
+        if (bookings.length > 0) {
+          bookings.forEach((booking, index) => {
+            let bookingEntry = `
+                        <div>
+                            <h3>Booking #${index + 1}</h3>
+                            <p><strong>Location:</strong> ${
+                              booking.location
+                            }</p>
+                            <p><strong>Check-in Date:</strong> ${
+                              booking.checkIn
+                            }</p>
+                            <p><strong>Check-out Date:</strong> ${
+                              booking.checkOut
+                            }</p>
+                            <p><strong>Number of Rooms:</strong> ${
+                              booking.rooms
+                            }</p>
+                            <p><strong>Number of Adults:</strong> ${
+                              booking.adults
+                            }</p>
+                            <p><strong>Number of Children:</strong> ${
+                              booking.children
+                            }</p>
+                            <p><strong>Name:</strong> ${booking.name}</p>
+                            <p><strong>Email Address:</strong> ${
+                              booking.email
+                            }</p>
+                            <p><strong>Phone Number:</strong> ${
+                              booking.phone
+                            }</p>
+                            <hr>
+                        </div>
+                    `;
+            confirmationDetails.innerHTML += bookingEntry;
+          });
+        } else {
+          confirmationDetails.innerHTML = "<p>No booking details found.</p>";
+        }
+      });
+      document.getElementById("admin").innerHTML = localStorage.getItem("loginName")
+    </script>
+  </body>
+</html>
